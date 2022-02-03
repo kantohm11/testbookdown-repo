@@ -3,7 +3,7 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-]{book}
+]{article}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -122,11 +122,16 @@
 \maketitle
 
 {
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \tableofcontents
 }
 \hypertarget{prerequisites}{%
-\chapter{Prerequisites}\label{prerequisites}}
+\section{Prerequisites}\label{prerequisites}}
+
+\begin{equation} 
+  xy = yx 
+  \label{eq:binom}
+\end{equation}
 
 This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2\).
 
@@ -145,7 +150,7 @@ Remember each Rmd file contains one and only one chapter, and a chapter is defin
 To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.name/tinytex/}.
 
 \hypertarget{intro}{%
-\chapter{Introduction}\label{intro}}
+\section{Introduction}\label{intro}}
 
 TEST this is a test
 
@@ -217,20 +222,22 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 
 You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 
+\eqref{eq:binom} \(test\)
+
 \hypertarget{literature}{%
-\chapter{Literature}\label{literature}}
+\section{Literature}\label{literature}}
 
 Here is a review of existing methods.
 
 \hypertarget{methods}{%
-\chapter{Methods}\label{methods}}
+\section{Methods}\label{methods}}
 
 We describe our methods in this chapter.
 
 Math can be added in body using usual syntax like this
 
 \hypertarget{math-example}{%
-\section{math example}\label{math-example}}
+\subsection{math example}\label{math-example}}
 
 \(p\) is unknown but expected to be around 1/3. Standard error will be approximated
 
@@ -247,18 +254,18 @@ We will approximate standard error to 0.027\footnote{\(p\) is unknown but expect
   \]}
 
 \hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
+\section{Applications}\label{applications}}
 
 Some \emph{significant} applications are demonstrated in this chapter.
 
 \hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
+\subsection{Example one}\label{example-one}}
 
 \hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
+\subsection{Example two}\label{example-two}}
 
 \hypertarget{final-words}{%
-\chapter{Final Words}\label{final-words}}
+\section{Final Words}\label{final-words}}
 
 We have finished a nice book.
 

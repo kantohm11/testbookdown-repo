@@ -111,12 +111,13 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\usepackage[]{natbib}
-\bibliographystyle{apalike}
+\usepackage[]{biblatex}
+\addbibresource{book.bib}
+\addbibresource{packages.bib}
 
 \title{A Minimal Book Example}
 \author{Yihui Xie}
-\date{2022-02-03}
+\date{2022-02-04}
 
 \begin{document}
 \maketitle
@@ -220,7 +221,7 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 \end{tabular}
 \end{table}
 
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+You can write citations, too. For example, we are using the \textbf{bookdown} package \autocite{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \autocite{xie2015}.
 
 \eqref{eq:binom} \(test\)
 
@@ -269,6 +270,6 @@ Some \emph{significant} applications are demonstrated in this chapter.
 
 We have finished a nice book.
 
-  \bibliography{book.bib,packages.bib}
+\printbibliography
 
 \end{document}
